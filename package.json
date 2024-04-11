@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "gh-pages": "^6.1.1",
     "node": "^18.20.2",
     "node-sass": "^9.0.0",
     "saas": "^1.0.0"
@@ -8,8 +9,10 @@
   "version": "1.0.0",
   "description": "Responsive website for tyeks security",
   "main": "index.js",
+  "homepage": "https://anelehoza.github.io/tyeks_website",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive "
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive ",
+    "deploy":"gh-pages -d dist"
   },
   "author": "Anele Hoza",
   "license": "MIT"
