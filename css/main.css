@@ -14,10 +14,8 @@
 }
 
 html{
-    font-size: 62.5%;
-    
+    font-size: 62.5%; 
 }
-
 body{
     overflow-x: hidden; 
 }
@@ -30,47 +28,36 @@ body{
     position: relative;
     letter-spacing: .2rem;
 }
-.container{
-    margin: 0px auto;
-	display:flex;
-	max-width: 1140px;
-	width: 100%;
-}
-
-.header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 1rem 2rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-}
 .header .logo img{
     width: 65px;
     height: 6rem;
     top: 0;
     left: 0;
 }
-.header .navbar ul{
-    list-style-type: none;
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.nav{
+    height: auto;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
-
-.header .navbar ul li{
-    margin: 0 1.5rem;
+ .header .nav-item{
+    margin: 0 1.5rem;  
 }
-
-.header .navbar ul li a{
+ .nav-item {
     font-size: 2rem;
-    color: #fff;
-    z-index: auto;
+    list-style: none;
+    display: flex;
 }
-.header .navbar ul li a:hover{
+.nav-item a{
+    color: #fff;
+}
+ .nav ul li a:hover{
     color: yellow;
     text-decoration: underline;
     opacity: 1;
@@ -81,36 +68,34 @@ body{
 .header .logo i{
     padding: 0.5rem;
 }
-.line{
-    width: 28px;
-    height: 3px;
-    background: #fff;
-    margin: 3px 0;
+.btnMenu{
+    width: 100%;
+    cursor: pointer;
     z-index: 100;
+    font-size: 3rem;
+    color: #fff;
 }
-.close{
-    position: absolute;
-    top: 10px;
-    padding: 15px 10px 0 0;
+
+.show{
+    top: 0;
 }
-.close .line:nth-child(1) {
-    transform: rotate(-45deg)translate(2px,5px);
+.navClose .fa-times{
+    width: 100%;
+    cursor: pointer;
+    z-index: 100;
+    font-size: 3rem;
+    color: #fff;
 }
-.close .line:nth-child(2){
-    opacity: 0;
-}
-.close .line:nth-child(3){
-    transform: rotate(45deg)translate(-4px,-11px);
-}
+
 .home{
     min-height: 100vh;
     width: 100vw;
-    background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../../dist/img/home.jpg');
+    background:linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7) ), url('../img/home.jpg');
     background-size: cover;
+    background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-flow: column;
     text-align: center;
     padding: 0 1rem;
     position: relative;
@@ -165,12 +150,12 @@ body{
     line-height: 10rem;
 }
 
-.about .row{
+.about .row {
     line-height: 4rem;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 0 4rem;
+    padding: 0 6rem;
 }
 
 .about .row .content{
@@ -1403,35 +1388,48 @@ article{
 
 
 /*Media Queries*/
-@media (max-width: 500px) {
-     html{
+@media screen and (max-width:768px) {
+    
+    html{
         font-size: 50%;
     }
-    .header .logo img{
-        display: none;
+    .menu{
+        position: fixed;
+        top:-100%;
+        left: 0;
+        background-color: rgba(0, 0, 0, .7);
+        padding-block: 4.5rem 4rem;
+        transition: top .4s;
+        z-index: 100;
     }
-     .showing{
-        position: absolute;
-        flex-flow: column wrap;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.8);
+    .menu-items{
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+        text-align: center;
+    }
+    .menu-links{
+        color: #fff;
+        transition: 4s;
+    }
+    .show{
+        top: 0;
     }
     .home{
         background-position: center;
         background-attachment: fixed;
         background-size: cover;
+
     }
-    
     .home h1{
         color: #fff;
-        font-size: 3rem;
+        font-size: 2.7rem;
     }
     
     .home h2{
         color: #fff;
         font-size: 2rem;
     }
-
     .about{
         min-height: 38vh;
         width: 100vw;
@@ -1442,6 +1440,7 @@ article{
         position: relative;
         overflow: hidden;
         line-height: 6rem;
+        font-size: 2rem;
     }
     .team-container{
         display: block;
@@ -1611,7 +1610,7 @@ article{
 
 }
 
-@media (max-width: 1000px){
+@media (max-width: 10000px){
     
     
     

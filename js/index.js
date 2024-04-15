@@ -1,7 +1,7 @@
 // load homepage
 $(document).ready(function(){
     $(window).on('load scroll',function(){
-        $('.navbar').removeClass('nav-toggle');
+        $('.nav').removeClass('nav-toggle');
         if($(window).scrollTop()>35)
         {
             $('.header').css({'background':'#009e60','box-shadow':'0 .2rem .2rem rgba(0,0,0,.4) '});
@@ -43,16 +43,30 @@ $(document).ready(function(){
    
     });
    
+//Menu Show
+
     //responsive menu toggle
-    $(document).ready(function(){
+      const navToggle = document.getElementById("navToggle");
+      const navClose = document.getElementById('navClose');
+
+      navToggle.addEventListener('click', () =>{
+        alert('showing')
+        menu.classList.add('show')
+      })
+      navClose.addEventListener('click', () =>{
+        alert('closing')
+        close.remove('show')
+      })
+    /*$(document).ready(function(){
      $(".btnMenu").click(function() {
-       $('.menu-nav').toggleClass('showing');
+       $('.navbar').toggleClass("showing");
      })
     })
      function myFunction(x){
        x.classList.toggle("close");
        
      }
+     */
     /*btnMenu.addEventListener.classList('click',toggleMenu)
      const btnMenu = document.querySelectorAll('.btnMenu')
      const navbar = document.querySelectorAll('.navbar')
