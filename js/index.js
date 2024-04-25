@@ -46,17 +46,9 @@ $(document).ready(function(){
 //Menu Show
 
     //responsive menu toggle
-      const navToggle = document.getElementById("navToggle");
-      const navClose = document.getElementById('navClose');
+     
 
-      navToggle.addEventListener('click', () =>{
-        alert('showing')
-        menu.classList.add('show')
-      })
-      navClose.addEventListener('click', () =>{
-        alert('closing')
-        close.remove('show')
-      })
+
     /*$(document).ready(function(){
      $(".btnMenu").click(function() {
        $('.navbar').toggleClass("showing");

@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="/dist/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
@@ -26,33 +26,83 @@
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">    
     <title>tyekssecurity</title>
     <script src="./js/index.js"></script>
+    <script src="./js/menu.js"></script>
 </head>
 <body>
-    <!--Navigation Bar-->
-<header class="header">
-        <nav class="nav"> 
-            <a href="#" class="logo"><img src="./img/logo.png" alt="logo"></a>      
-           <div class="nav_menu show" id="nav_menu">
-               <ul class="nav-list" id="nav-list">
-                  <li class="nav-item" id="nav-links"> <a href="index.html" class="active">Home</a></li>
-                  <li class="nav-item" id="nav-links"> <a href="#about" >About</a></li>
-                  <li class="nav-item" id="nav-links"> <a href="#team" >Team</a></li>
-                  <li class="nav-item" id="nav-links"><a href="#services">Services</a></li>
-                  <li class="nav-item" id="nav-links"><a href="#gallery">Gallery</a></li>
-                  <li  class="nav-item" id="nav-links"><a href="/dist/html/newsletter.html">News</a>
-                  <li class="nav-item" id="nav-links"><a href="#office">Contact</a> </li>
-                  <li class="nav-item" id="nav-links"><a href="/dist/html/">Careers</a> </li>
-                  <li class="nav-item" id="nav-links"><a href="#academy">Academy</a>
-            </ul>
+    
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <a href="#" class="logo">Logo</a>
+                <nav class="nav">
+                    <div class="nav_menu" id="nav-menu">
+                        <ul class="nav_list">
+                            <li class="nav_item">
+                                <a href="" class="nav_link">Home</a>
+                            </li>
+                            <li class="nav_item">
+                                <a href="" class="nav_link">About</a>
+                            </li>
+                            <li class="nav_item">
+                                <a href="" class="nav_link">Contact</a>
+                            </li>
+                            <li class="nav_item">
+                                <a href="" class="nav_link">Services</a>
+                            </li>
+                        </ul>
+                        <div class="nav_close" id="nav-close">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+        
+                        </div>
+                    </div>
+                    <div class="nav_toggle" id="nav-toggle">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </div>
+                </nav>
         </div>
-    <div class="navClose" id="navClose">
-        <i class="fa fa-times" aria-hidden="true"></i>
     </div>
-    <div class="btnMenu" id="navToggle">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-   </div>
-</nav>
- </header>
+    <!--Navigation Bar
+    <div class="wrapper">
+        <div class="header">
+            <a href="#" class="logo" ><img src="./img/logo.png" alt="logo"></a>
+               <nav class="nav">
+                   <div class="nav_menu" id="nav-menu">
+                    <ul class="nav_list" id="nav-list">
+                        <li class="nav_item">
+                            <a href="index.html" class="nav-links active">Home</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href= "#about" class="nav-links">About</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#team" class="nav-links" >Team</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#gallery" class="nav-links">Gallery</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="/dist/html/newsletter.html" class="nav-links">News</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#office" class="nav-links">Contact</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="/dist/html/" class="nav-links">Careers</a>
+                        </li>
+                        <li class="nav_item">
+                            <a href="#academy" class="nav-links">Academy</a>
+                        </li>
+                    </ul>
+                    <div class="nav_close" id="nav-close">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </div>
+                 </div>
+                 <div class="nav_toggle" id="nav-toggle">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+            </nav>
+        </div>
+    </div>-->
  <section id="home" class="home">
             <h1>"Our Priority Is To Secure"</h1> 
             <div class="wave wave1"></div>
@@ -371,7 +421,7 @@
 
 </section>
 <!--Java Script-->
-<script src="../dist/js/index.js"></script>
+<script src="./js/index.js"></script>
 
 
 </script>
